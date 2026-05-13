@@ -1040,8 +1040,7 @@ img {
   }
 
   .see-all-works-bottom {
-    display: block;
-    width: fit-content;
+    display: table;
     margin: 40px auto 0;
   }
 
