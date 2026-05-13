@@ -1044,7 +1044,7 @@ img {
     text-align: center;
     margin-top: 40px;
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 4px;
     text-decoration-thickness: 0.5px;
     border-bottom: none;
     padding-bottom: 0;
