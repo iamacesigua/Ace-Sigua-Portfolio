@@ -12,8 +12,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230f0f0f'/><text x='8' y='12' text-anchor='middle' font-family='Inter' font-weight='700' font-size='12' fill='white'>A</text></svg>">
 </head>
 <body>
-<script src="../../assets/js/include.js"></script>
-<script>includeNav(3)</script>
+<div id="nav-container"></div>
 
 <main>
 <div class="page-wrapper">
@@ -22,26 +21,47 @@
         <h1 class="project-title">PODCASTS</h1>
         <p class="project-category">Videography, Audio Mastering, Art Direction</p>
         <div class="project-featured-image">
-          <img src="../../assets/Projects/podcasts/1.jpg" alt="Podcasts" class="project-featured-image-el" loading="lazy">
+          <picture>
+          <source srcset="../../assets/Projects/podcasts/1.webp" type="image/webp">
+          <img src="../../assets/Projects/podcasts/1.jpg" alt="Podcasts" class="project-featured-image-el" loading="lazy" width="1920" height="1280">
+        </picture>
         </div>
       </div>
     </section>
 
     <section class="project-gallery">
       <div class="project-gallery-inner">
-        <img src="../../assets/Projects/podcasts/2.png" alt="Podcasts" class="project-image project-image-fill" loading="lazy">
-        <img src="../../assets/Projects/podcasts/3.png" alt="Podcasts" class="project-image project-image-fill" loading="lazy">
-        <img src="../../assets/Projects/podcasts/4.JPG" alt="Podcasts" class="project-image project-image-fill" loading="lazy">
-        <img src="../../assets/Projects/podcasts/5.JPG" alt="Podcasts" class="project-image project-image-fill" loading="lazy">
+        <picture>
+          <source srcset="../../assets/Projects/podcasts/2.webp" type="image/webp">
+          <img src="../../assets/Projects/podcasts/2.png" alt="Podcasts" class="project-image project-image-fill" loading="lazy" width="1920" height="1078">
+        </picture>
+        <picture>
+          <source srcset="../../assets/Projects/podcasts/3.webp" type="image/webp">
+          <img src="../../assets/Projects/podcasts/3.png" alt="Podcasts" class="project-image project-image-fill" loading="lazy" width="1920" height="1077">
+        </picture>
+        <picture>
+          <source srcset="../../assets/Projects/podcasts/4.webp" type="image/webp">
+          <img src="../../assets/Projects/podcasts/4.JPG" alt="Podcasts" class="project-image project-image-fill" loading="lazy" width="1920" height="1080">
+        </picture>
+        <picture>
+          <source srcset="../../assets/Projects/podcasts/5.webp" type="image/webp">
+          <img src="../../assets/Projects/podcasts/5.JPG" alt="Podcasts" class="project-image project-image-fill" loading="lazy" width="1920" height="1280">
+        </picture>
       </div>
     </section>
 
-    <script>includeNextProjects('podcasts', 3)</script>
+    <div id="next-projects-container"></div>
   </div>
 </main>
 
-<script>includeFooter(3)</script>
-<script>initNav()</script>
+<div id="footer-container"></div>
+
+
+<script defer src="../../assets/js/include.js"></script>
+<script defer>includeNav(3)</script>
+<script defer>includeNextProjects('podcasts', 3)</script>
+<script defer>includeFooter(3)</script>
+<script defer>initNav()</script>
 </body>
 </html>
 

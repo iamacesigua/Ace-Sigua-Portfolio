@@ -12,8 +12,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230f0f0f'/><text x='8' y='12' text-anchor='middle' font-family='Inter' font-weight='700' font-size='12' fill='white'>A</text></svg>">
 </head>
 <body>
-<script src="../../assets/js/include.js"></script>
-<script>includeNav(3)</script>
+<div id="nav-container"></div>
 
 <main>
 <div class="page-wrapper">
@@ -22,17 +21,26 @@
         <h1 class="project-title">LOGIQUEST</h1>
         <p class="project-category">Branding, Graphic Design</p>
         <div class="project-featured-image" style="margin-bottom: 80px">
-          <img src="../../assets/Projects/logiquest/1.png" alt="Logiquest" class="project-featured-image-el" loading="lazy">
+          <picture>
+          <source srcset="../../assets/Projects/logiquest/1.webp" type="image/webp">
+          <img src="../../assets/Projects/logiquest/1.png" alt="Logiquest" class="project-featured-image-el" loading="lazy" width="1920" height="2716">
+        </picture>
         </div>
       </div>
     </section>
 
-    <script>includeNextProjects('logiquest', 3)</script>
+    <div id="next-projects-container"></div>
   </div>
 </main>
 
-<script>includeFooter(3)</script>
-<script>initNav()</script>
+<div id="footer-container"></div>
+
+
+<script defer src="../../assets/js/include.js"></script>
+<script defer>includeNav(3)</script>
+<script defer>includeNextProjects('logiquest', 3)</script>
+<script defer>includeFooter(3)</script>
+<script defer>initNav()</script>
 </body>
 </html>
 

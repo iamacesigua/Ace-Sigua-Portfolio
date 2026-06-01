@@ -12,8 +12,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230f0f0f'/><text x='8' y='12' text-anchor='middle' font-family='Inter' font-weight='700' font-size='12' fill='white'>A</text></svg>">
 </head>
 <body>
-<script src="../../assets/js/include.js"></script>
-<script>includeNav(3)</script>
+<div id="nav-container"></div>
 
 <main>
 <div class="page-wrapper">
@@ -22,7 +21,10 @@
         <h1 class="project-title">BASKETBALL MEDIA DAY</h1>
         <p class="project-category">Photography, Art Direction</p>
         <div class="project-featured-image">
-          <img src="../../assets/Projects/basketball/1.png" alt="Basketball Media Day" class="project-featured-image-el" loading="lazy">
+          <picture>
+          <source srcset="../../assets/Projects/basketball/1.webp" type="image/webp">
+          <img src="../../assets/Projects/basketball/1.png" alt="Basketball Media Day" class="project-featured-image-el" loading="lazy" width="1920" height="1921">
+        </picture>
         </div>
       </div>
     </section>
@@ -30,18 +32,30 @@
     <section class="project-gallery">
       <div class="project-gallery-inner">
         <div class="project-image-row">
-          <img src="../../assets/Projects/basketball/2.jpg" alt="Basketball Media Day" class="project-image project-image-fill" loading="lazy">
-          <img src="../../assets/Projects/basketball/3.png" alt="Basketball Media Day" class="project-image project-image-fill" loading="lazy">
+          <picture>
+          <source srcset="../../assets/Projects/basketball/2.webp" type="image/webp">
+          <img src="../../assets/Projects/basketball/2.jpg" alt="Basketball Media Day" class="project-image project-image-fill" loading="lazy" width="1920" height="1920">
+        </picture>
+          <picture>
+          <source srcset="../../assets/Projects/basketball/3.webp" type="image/webp">
+          <img src="../../assets/Projects/basketball/3.png" alt="Basketball Media Day" class="project-image project-image-fill" loading="lazy" width="1920" height="1920">
+        </picture>
         </div>
       </div>
     </section>
 
-    <script>includeNextProjects('basketball', 3)</script>
+    <div id="next-projects-container"></div>
   </div>
 </main>
 
-<script>includeFooter(3)</script>
-<script>initNav()</script>
+<div id="footer-container"></div>
+
+
+<script defer src="../../assets/js/include.js"></script>
+<script defer>includeNav(3)</script>
+<script defer>includeNextProjects('basketball', 3)</script>
+<script defer>includeFooter(3)</script>
+<script defer>initNav()</script>
 </body>
 </html>
 

@@ -32,7 +32,8 @@ function includeNav(depth, active) {
       '<a href="' + p + 'index.html#about" class="mobile-nav-link">ABOUT</a>' +
       '<a href="' + p + 'contact/index.html" class="mobile-nav-link">CONTACT</a>' +
     '</div>';
-  document.write(nav);
+  var el = document.getElementById('nav-container');
+  if (el) el.innerHTML = nav;
 }
 
 function includeNextProjects(currentSlug, depth) {
@@ -102,7 +103,8 @@ function includeNextProjects(currentSlug, depth) {
     var w = chosen[q];
     html += '<a href="' + p + 'works/' + w.path + '" class="next-card"><div class="next-card-image-wrapper">';
     if (w.image) {
-      html += '<img src="' + imgBase + w.image + '" alt="' + w.title + '" class="next-card-image" loading="lazy"' + (w.op ? ' style="object-position:' + w.op + '"' : '') + '>';
+      var webpSrc = imgBase + w.image.replace(/\.\w+$/, '.webp');
+      html += '<picture><source srcset="' + webpSrc + '" type="image/webp"><img src="' + imgBase + w.image + '" alt="' + w.title + '" class="next-card-image" loading="lazy"' + (w.op ? ' style="object-position:' + w.op + '"' : '') + '></picture>';
     } else {
       html += '<div class="works-all-card-placeholder">' + w.title.replace(/ /g, '<br>') + '</div>';
     }
@@ -110,7 +112,8 @@ function includeNextProjects(currentSlug, depth) {
   }
 
   html += '</div></div></section>';
-  document.write(html);
+  var el = document.getElementById('next-projects-container');
+  if (el) el.innerHTML = html;
 }
 
 function includeFooter(depth) {
@@ -127,7 +130,8 @@ function includeFooter(depth) {
         '</div>' +
       '</div>' +
     '</footer>';
-  document.write(footer);
+  var el = document.getElementById('footer-container');
+  if (el) el.innerHTML = footer;
 }
 
 function initNav() {

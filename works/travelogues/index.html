@@ -12,8 +12,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230f0f0f'/><text x='8' y='12' text-anchor='middle' font-family='Inter' font-weight='700' font-size='12' fill='white'>A</text></svg>">
 </head>
 <body>
-<script src="../../assets/js/include.js"></script>
-<script>includeNav(3)</script>
+<div id="nav-container"></div>
 
   <main>
 <div class="page-wrapper">
@@ -52,7 +51,7 @@
       </div>
     </section>
 
-    <script>includeNextProjects('travelogues', 3)</script>
+    <div id="next-projects-container"></div>
   </div>
   </main>
 
@@ -78,6 +77,11 @@
       });
     });
   </script>
-<script>initNav()</script>
+
+
+<script defer src="../../assets/js/include.js"></script>
+<script defer>includeNav(3)</script>
+<script defer>includeNextProjects('travelogues', 3)</script>
+<script defer>initNav()</script>
 </body>
 </html>
