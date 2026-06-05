@@ -215,8 +215,6 @@ document.querySelectorAll('.filter-btn').forEach(function(btn) {
 
 
 <script defer src="../assets/js/include.js"></script>
-<script defer>includeNav(2, 'works')</script>
-<script defer>includeFooter(2)</script>
-<script defer>initNav()</script>
+<script>document.addEventListener('DOMContentLoaded',function(){includeNav(2,'works');includeFooter(2);initNav();});</script>
 </body>
 </html>
