@@ -19,6 +19,21 @@
     "height": 2880,
     "webp": "assets/Projects/adventurerace/4.webp"
   },
+  "assets/Projects/Avanza/1.jpeg": {
+    "width": 1920,
+    "height": 1072,
+    "webp": "assets/Projects/Avanza/1.webp"
+  },
+  "assets/Projects/Avanza/2.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "webp": "assets/Projects/Avanza/2.webp"
+  },
+  "assets/Projects/Avanza/3.jpg": {
+    "width": 1200,
+    "height": 1200,
+    "webp": "assets/Projects/Avanza/3.webp"
+  },
   "assets/Projects/basketball/1.png": {
     "width": 1920,
     "height": 1921,
@@ -33,6 +48,41 @@
     "width": 1920,
     "height": 1920,
     "webp": "assets/Projects/basketball/3.webp"
+  },
+  "assets/Projects/daewoo/1.jpeg": {
+    "width": 1920,
+    "height": 1920,
+    "webp": "assets/Projects/daewoo/1.webp"
+  },
+  "assets/Projects/daewoo/2-poster.jpg": {
+    "width": 1920,
+    "height": 1080,
+    "webp": "assets/Projects/daewoo/2-poster.webp"
+  },
+  "assets/Projects/daewoo/3.png": {
+    "width": 1920,
+    "height": 1920,
+    "webp": "assets/Projects/daewoo/3.webp"
+  },
+  "assets/Projects/daewoo/4.jpeg": {
+    "width": 1920,
+    "height": 1434,
+    "webp": "assets/Projects/daewoo/4.webp"
+  },
+  "assets/Projects/daewoo/5-poster.jpg": {
+    "width": 1080,
+    "height": 1920,
+    "webp": "assets/Projects/daewoo/5-poster.webp"
+  },
+  "assets/Projects/daewoo/6-poster.jpg": {
+    "width": 1080,
+    "height": 1080,
+    "webp": "assets/Projects/daewoo/6-poster.webp"
+  },
+  "assets/Projects/daewoo/Cover.jpeg": {
+    "width": 1376,
+    "height": 768,
+    "webp": "assets/Projects/daewoo/Cover.webp"
   },
   "assets/Projects/guinness/1.png": {
     "width": 1920,
@@ -189,10 +239,20 @@
     "height": 2132,
     "webp": "assets/images/Selected Works/works-adventurerace.webp"
   },
+  "assets/images/Selected Works/works-avanza.png": {
+    "width": 1200,
+    "height": 1200,
+    "webp": "assets/images/Selected Works/works-avanza.webp"
+  },
   "assets/images/Selected Works/works-basketball.png": {
     "width": 1200,
     "height": 1200,
     "webp": "assets/images/Selected Works/works-basketball.webp"
+  },
+  "assets/images/Selected Works/works-daewoo.png": {
+    "width": 1200,
+    "height": 670,
+    "webp": "assets/images/Selected Works/works-daewoo.webp"
   },
   "assets/images/Selected Works/works-guinness.png": {
     "width": 1200,
@@ -248,6 +308,11 @@
     "width": 800,
     "height": 450,
     "webp": "assets/images/Home/about-bg.webp"
+  },
+  "assets/images/Home/Loading.gif": {
+    "width": 800,
+    "height": 600,
+    "webp": "assets/images/Home/Loading.webp"
   },
   "assets/images/Pointer Trail/T1.jpg": {
     "width": 800,

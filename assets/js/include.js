@@ -38,6 +38,7 @@ function includeNav(depth, active) {
 
 function includeNextProjects(currentSlug, depth) {
   var allWorks = [
+    { slug: 'daewoo', path: 'daewoo/index.html', title: 'DAEWOO', category: 'Digital Marketing, Art Direction, Gen AI', image: 'works-daewoo.png' },
     { slug: 'travelogues', path: 'travelogues/index.html', title: 'TRAVELOGUES', category: 'Videography, Art Direction, Audio Mastering', image: 'works-travelogues.png', op: '50.5% 79.2%' },
     { slug: 'adventurerace', path: 'adventurerace/index.html', title: 'ADVENTURE RACE', category: 'Photography, Graphic Design', image: 'works-adventurerace.jpg', op: '50.8% 29.7%' },
     { slug: 'guinness', path: 'guinness/index.html', title: 'GUINNESS', category: 'Photography, Gen AI', image: 'works-guinness.png' },
@@ -49,7 +50,8 @@ function includeNextProjects(currentSlug, depth) {
     { slug: 'luzviminda', path: 'luzviminda/index.html', title: 'LUZVIMINDA', category: 'Graphic Design, Art Direction', image: 'works-luzviminda.png' },
     { slug: 'mv', path: 'mv/index.html', title: 'MUSIC VIDEO', category: 'Videography, Art Direction', image: 'works-mv.png', op: '43.6% 30.9%' },
     { slug: 'hk-film-awards', path: 'hk-film-awards/index.html', title: 'HK FILM AWARDS', category: 'Graphic Design', image: 'works-hkfilmawards.png' },
-    { slug: 'kalepgolf', path: 'kalepgolf/index.html', title: 'KALEP GOLF', category: 'Art Direction, Gen AI, Videography', image: 'works-kalepgolf.png' }
+    { slug: 'kalepgolf', path: 'kalepgolf/index.html', title: 'KALEP GOLF', category: 'Art Direction, Gen AI, Videography', image: 'works-kalepgolf.png' },
+    { slug: 'avanza', path: 'avanza/index.html', title: 'AVANZA', category: 'Digital Marketing, Art Direction, Gen AI', image: 'works-avanza.png' }
   ];
 
   var others = [];

@@ -1241,3 +1241,27 @@ img {
     font-size: 48px;
   }
 }
+
+/* Page Loader */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.page-loader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page-loader img {
+  width: 280px;
+  height: auto;
+  display: block;
+}

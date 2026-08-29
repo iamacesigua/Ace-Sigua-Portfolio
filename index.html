@@ -18,6 +18,9 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='3' fill='%230f0f0f'/><text x='8' y='12' text-anchor='middle' font-family='Inter' font-weight='700' font-size='12' fill='white'>A</text></svg>">
 </head>
 <body>
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <img src="assets/images/Home/Loading.gif" alt="Loading">
+</div>
 <div id="nav-container"></div>
 
   <main>
@@ -37,16 +40,31 @@
       </div>
       <div class="works-grid">
         <article class="work-card" data-delay="0">
-          <a href="./works/travelogues/index.html">
+          <a href="./works/daewoo/index.html">
             <div class="work-image-wrapper">
               <picture>
-          <source srcset="assets/images/Selected Works/works-travelogues.webp" type="image/webp">
-          <img src="assets/images/Selected Works/works-travelogues.png" alt="Travelogues" class="work-image" loading="lazy" width="523" height="935" style="object-position: 50.5% 79.2%">
+          <source srcset="assets/images/Selected Works/works-daewoo.webp" type="image/webp">
+          <img src="assets/images/Selected Works/works-daewoo.png" alt="Daewoo" class="work-image" loading="lazy" width="1200" height="670">
         </picture>
             </div>
             <div class="work-details">
-              <h3 class="work-title">TRAVELOGUES</h3>
-              <p class="work-category">Videography, Art Direction, Audio Mastering</p>
+              <h3 class="work-title">DAEWOO</h3>
+              <p class="work-category">Digital Marketing, Art Direction, Gen AI</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="work-card" data-delay="50">
+          <a href="./works/guinness/index.html">
+            <div class="work-image-wrapper">
+              <picture>
+          <source srcset="assets/images/Selected Works/works-guinness.webp" type="image/webp">
+          <img src="assets/images/Selected Works/works-guinness.png" alt="Guinness" class="work-image" loading="lazy" width="1200" height="1800">
+        </picture>
+            </div>
+            <div class="work-details">
+              <h3 class="work-title">GUINNESS</h3>
+              <p class="work-category">Photography, Gen AI</p>
             </div>
           </a>
         </article>
@@ -67,16 +85,16 @@
         </article>
 
         <article class="work-card" data-delay="100">
-          <a href="./works/guinness/index.html">
+          <a href="./works/travelogues/index.html">
             <div class="work-image-wrapper">
               <picture>
-          <source srcset="assets/images/Selected Works/works-guinness.webp" type="image/webp">
-          <img src="assets/images/Selected Works/works-guinness.png" alt="Guinness" class="work-image" loading="lazy" width="1200" height="1800">
+          <source srcset="assets/images/Selected Works/works-travelogues.webp" type="image/webp">
+          <img src="assets/images/Selected Works/works-travelogues.png" alt="Travelogues" class="work-image" loading="lazy" width="523" height="935" style="object-position: 50.5% 79.2%">
         </picture>
             </div>
             <div class="work-details">
-              <h3 class="work-title">GUINNESS</h3>
-              <p class="work-category">Photography, Gen AI</p>
+              <h3 class="work-title">TRAVELOGUES</h3>
+              <p class="work-category">Videography, Art Direction, Audio Mastering</p>
             </div>
           </a>
         </article>
@@ -215,6 +233,21 @@
             </div>
           </a>
         </article>
+
+        <article class="work-card" data-delay="600">
+          <a href="./works/avanza/index.html">
+            <div class="work-image-wrapper">
+              <picture>
+          <source srcset="assets/images/Selected Works/works-avanza.webp" type="image/webp">
+          <img src="assets/images/Selected Works/works-avanza.png" alt="Avanza" class="work-image" loading="lazy" width="1200" height="1200">
+        </picture>
+            </div>
+            <div class="work-details">
+              <h3 class="work-title">AVANZA</h3>
+              <p class="work-category">Digital Marketing, Art Direction, Gen AI</p>
+            </div>
+          </a>
+        </article>
       </div>
       <a href="./works/index.html" class="see-all-works see-all-works-bottom">SEE ALL WORKS</a>
     </section>
@@ -251,6 +284,71 @@
   <div id="footer-container"></div>
 
   <script>
+    const heroTrailImages = [
+      'assets/images/Pointer Trail/T1.webp',
+      'assets/images/Pointer Trail/T2.webp',
+      'assets/images/Pointer Trail/T3.webp',
+      'assets/images/Pointer Trail/T4.webp',
+      'assets/images/Pointer Trail/T5.webp',
+      'assets/images/Pointer Trail/T6.webp',
+      'assets/images/Pointer Trail/T7.webp'
+    ];
+
+    const pageLoader = document.getElementById('pageLoader');
+
+    function hidePageLoader() {
+      if (!pageLoader || pageLoader.classList.contains('hidden')) return;
+      document.body.style.overflow = '';
+      pageLoader.classList.add('hidden');
+      setTimeout(function() {
+        if (pageLoader.parentNode) pageLoader.parentNode.removeChild(pageLoader);
+      }, 500);
+    }
+
+    function preloadTrailImages(callback) {
+      var remaining = heroTrailImages.length;
+      var done = false;
+      function onDone() {
+        remaining--;
+        if (done || remaining > 0) return;
+        done = true;
+        callback();
+      }
+      heroTrailImages.forEach(function(src) {
+        var img = new Image();
+        img.onload = onDone;
+        img.onerror = onDone;
+        img.src = src;
+      });
+      setTimeout(function() {
+        if (!done) {
+          done = true;
+          callback();
+        }
+      }, 5000);
+    }
+
+    if (pageLoader) {
+      var loaderStart = Date.now();
+      var preloadDone = false;
+      document.body.style.overflow = 'hidden';
+
+      function revealPage() {
+        if (!preloadDone) return;
+        var elapsed = Date.now() - loaderStart;
+        if (elapsed < 2000) {
+          setTimeout(revealPage, 2000 - elapsed);
+          return;
+        }
+        hidePageLoader();
+      }
+
+      preloadTrailImages(function() {
+        preloadDone = true;
+        revealPage();
+      });
+    }
+
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -288,15 +386,7 @@
       const hero = document.getElementById('hero');
       if (!trailContainer || !hero) return;
 
-      const imageUrls = [
-        'assets/images/Pointer Trail/T1.webp',
-        'assets/images/Pointer Trail/T2.webp',
-        'assets/images/Pointer Trail/T3.webp',
-        'assets/images/Pointer Trail/T4.webp',
-        'assets/images/Pointer Trail/T5.webp',
-        'assets/images/Pointer Trail/T6.webp',
-        'assets/images/Pointer Trail/T7.webp'
-      ];
+      const imageUrls = heroTrailImages;
 
       const trailItems = [];
       const maxItems = 8;
